@@ -10,14 +10,18 @@ import sys
 import webbrowser
 from time import sleep
 
-if '-v' in sys.argv:
-    print 'openBrowser 0.0.1'
-elif '-h' in sys.argv:
-    print "-v show version"
-    print "-h helper"
-else:
-    target = sys.argv[1]
-    webbrowser.open(target)
+def main():
+    if '-v' in sys.argv:
+        print 'openBrowser 0.0.4'
+    elif '-h' in sys.argv:
+        print "-v show version"
+        print "-h helper"
+    else:
+        target = sys.argv[1]
+        webbrowser.open(target)
 
-    sleep(3)
-    exit()
+        sleep(3)
+        exit()
+
+if __name__ == '__main__':
+    main()
